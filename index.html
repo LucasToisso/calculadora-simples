@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora Simples</title>
+        <style type="text/css">
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Calculadora Simples</h1>
+        </header>
+
+        <main>
+            <p>Digite o primeiro número a ser calculado</p>
+            <input type="number" min="-99" max="99" id="primeiro">
+
+            <p>Digite o segundo número a ser calculado</p>
+            <input type="number" min="-99" max="99" id="segundo">
+            <br><br>
+            
+            <button id="soma"> Soma </button>
+            <button id="subtracao"> Subtração </button>
+            <button id="divisao"> Divisão </button>
+            <button id="multiplicacao"> Multiplicação </button>
+            
+
+            <h2 id="calculo"></h2>
+        </main>
+
+        <script>
+
+            function verificaSoma(){
+                //calculo.innerHTML = +document.getElementById('primeiro').value + +document.getElementById('segundo').value;
+                calculo.innerHTML = Number(document.getElementById('primeiro').value) + Number(document.getElementById('segundo').value);
+            }
+
+            function verificaSubt(){
+                calculo.innerHTML = document.getElementById('primeiro').value - document.getElementById('segundo').value;
+            }
+
+            function verificaDivi(){
+                calculo.innerHTML = document.getElementById('primeiro').value / document.getElementById('segundo').value;
+            }
+
+            function verificaMult(){
+                calculo.innerHTML = document.getElementById('primeiro').value * document.getElementById('segundo').value;
+            }
+
+            soma.onclick = verificaSoma;
+            subtracao.onclick = verificaSubt;
+            divisao.onclick = verificaDivi;
+            multiplicacao.onclick = verificaMult;
+
+        </script>
+    </body>
+</html>
