@@ -22,10 +22,10 @@
             <input type="number" min="-99" max="99" id="segundo">
             <br><br>
             
-            <button id="soma"> Soma </button>
-            <button id="subtracao"> Subtração </button>
-            <button id="divisao"> Divisão </button>
-            <button id="multiplicacao"> Multiplicação </button>
+            <button onclick="verificaSoma()"> Soma </button>
+            <button onclick="verificaSubt()"> Subtração </button>
+            <button onclick="verificaDivi()"> Divisão </button>
+            <button onclick="verificaMult()"> Multiplicação </button>
             
 
             <h2 id="calculo"></h2>
@@ -49,11 +49,6 @@
             function verificaMult(){
                 calculo.innerHTML = document.getElementById('primeiro').value * document.getElementById('segundo').value;
             }
-
-            soma.onclick = verificaSoma;
-            subtracao.onclick = verificaSubt;
-            divisao.onclick = verificaDivi;
-            multiplicacao.onclick = verificaMult;
 
         </script>
     </body>
